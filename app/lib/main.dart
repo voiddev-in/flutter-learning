@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'examples/widgets_and_tree_lesson.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const WidgetsLessonApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Home Page'),
     );
   }
 }
