@@ -40,10 +40,7 @@ class MainLessonScreen extends StatelessWidget {
           children: [
             const Text("Hello Lohith"),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Click Me"),
-            ),
+            ElevatedButton(onPressed: () {}, child: const Text("Click Me")),
             const Divider(height: 40),
             const Text(
               "Other Examples:",
@@ -53,14 +50,18 @@ class MainLessonScreen extends StatelessWidget {
               onProfilePressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ProfileScreenExample()),
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreenExample(),
+                  ),
                 );
               },
               child: const Text("View Profile Screen (Composition)"),
               onPressed: () {
-                 Navigator.push(
+                Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ProfileScreenExample()),
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreenExample(),
+                  ),
                 );
               },
             ),
@@ -68,7 +69,9 @@ class MainLessonScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CounterScreenExample()),
+                  MaterialPageRoute(
+                    builder: (context) => const CounterScreenExample(),
+                  ),
                 );
               },
               child: const Text("View Counter (State & build)"),
@@ -118,12 +121,12 @@ class ProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        CircleAvatar(
-          radius: 40,
-          child: Icon(Icons.person, size: 40),
-        ),
+        CircleAvatar(radius: 40, child: Icon(Icons.person, size: 40)),
         SizedBox(height: 10),
-        Text("Lohith", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        Text(
+          "john",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
         Text("Flutter Developer"),
       ],
     );
@@ -138,7 +141,9 @@ class UserDetails extends StatelessWidget {
     return const Card(
       child: Padding(
         padding: EdgeInsets.all(16.0),
-        child: Text("Passionate about building beautiful cross-platform applications using Flutter."),
+        child: Text(
+          "Passionate about building beautiful cross-platform applications using Flutter.",
+        ),
       ),
     );
   }
@@ -152,7 +157,10 @@ class SkillsSection extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Skills", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        Text(
+          "Skills",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
         SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -172,10 +180,7 @@ class ContactButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: const Text("Contact Me"),
-    );
+    return ElevatedButton(onPressed: () {}, child: const Text("Contact Me"));
   }
 }
 
@@ -190,9 +195,7 @@ class CounterScreenExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Counter - State & Build")),
-      body: const Center(
-        child: Counter(),
-      ),
+      body: const Center(child: Counter()),
     );
   }
 }
@@ -212,9 +215,7 @@ class _CounterState extends State<Counter> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          "You have pushed the button this many times:",
-        ),
+        const Text("You have pushed the button this many times:"),
         Text(
           "$count",
           style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
@@ -259,10 +260,7 @@ class CustomWidgetExample extends StatelessWidget {
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            WelcomeMessage(),
-            Text("Flutter Developer"),
-          ],
+          children: [WelcomeMessage(), Text("Flutter Developer")],
         ),
       ),
     );
